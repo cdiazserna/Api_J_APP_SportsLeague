@@ -34,7 +34,9 @@ namespace SportsLeague.Domain.Services
             var player = await _playerRepository.GetByIdWithTeamAsync(id);
 
             if (player == null)
+        {
                 _logger.LogWarning("Player with ID {PlayerId} not found", id);
+        }
 
             return player;
         }
