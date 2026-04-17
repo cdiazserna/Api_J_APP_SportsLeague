@@ -12,5 +12,6 @@ namespace SportsLeague.Domain.Entities
 
         // Navigation Properties
         public ICollection<TournamentTeam> TournamentTeams { get; set; } = new List<TournamentTeam>();
+        public ICollection<Match> Matches { get; set; } = new List<Match>();
     }
 }
