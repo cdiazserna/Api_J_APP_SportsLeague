@@ -48,7 +48,7 @@ builder.Services.AddSwaggerGen();
 var app = builder.Build();
 
 // ── Data Seeder ──
-using (var scope = app.Services.CreateScope())
+using (var scope = app.Services.CreateScope()) //Scoped, Singleton y Transient
 {
     var context = scope.ServiceProvider.GetRequiredService<LeagueDbContext>();
 
